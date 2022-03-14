@@ -33,7 +33,7 @@
       <name and="symbol" delimiter=", " delimiter-precedes-last="never"/>
       <label form="short" prefix=" "/>
       <substitute>
-        <text variable="title"/>
+        <text variable="title " font-style="italic"/>
       </substitute>
     </names>
   </macro>
@@ -111,7 +111,7 @@
       <else-if type="legal_case">
         <group delimiter=" ">
           <group delimiter=", ">
-            <text variable="title"/>
+            <text variable="title" font-style="italic"/>
             <text variable="volume"/>
           </group>
           <text macro="container"/>
@@ -230,7 +230,7 @@
     <layout suffix="." delimiter="; ">
       <choose>
         <if position="ibid">
-          <text value="id." text-case="capitalize-first" font-style="italic"/>
+          <text value="id. " text-case="capitalize-first" font-style="italic"/>
           <text macro="at_page"/>
         </if>
         <else-if position="subsequent">
@@ -247,6 +247,7 @@
               <text value="supra" font-style="italic"/>
               <text value="note"/>
               <text variable="first-reference-note-number"/>
+			  <text value=","/>
               <text macro="at_page"/>
             </group>
           </group>
